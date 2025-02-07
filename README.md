@@ -44,12 +44,15 @@ All sensors initialized successfully!
 
 MPU6050 Sensor Data:
 Accelerometer (X, Y, Z): 16808, -284, -1812
+Accelerometer (g): 1.02, -0.02, -0.11
 Gyroscope (X, Y, Z): -76, -85, -64
 
 Current UTC Time using DS3:
 UTC Time: 2025/01/23  14:23:06
 
-Magnetometer HMC/QMC
+Magnetometer HMC/QMC:
 X: -0.01 µT  Y: -0.18 µT  Z: 0.10
+Magnetic Field Strength: 0.198 µT  (Normal range: 25-65 µT, very weak - possible interference)
+Compass Heading: 263.29° 
 -------------------------
 ```
