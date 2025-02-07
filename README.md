@@ -1,7 +1,5 @@
 # CubeSat Subsystem
 
-![CubeSat](https://example.com/cubesat_image.png)
-
 A fully functional CubeSat telemetry subsystem built with Arduino and various sensors.
 
 ## Overview
@@ -26,16 +24,3 @@ This project simulates a CubeSat telemetry subsystem, integrating various sensor
 | LoRa SX1278 | Wireless Telemetry Communication | 
 | HMC5883L | Triple-Axis Magnetometer |
 | MPU6050 | Gyroscope/Accelerometer for Orientation Sensing |
-
-## System Setup
-
-### Step 1: Hardware Assembly
-1. Connect Arduino Uno to the sensors on a breadboard.
-2. Attach the LoRa module for communication.
-3. Power up the system with a USB or 9V battery.
-
-### Step 2: Software Installation
-1. Install Arduino IDE.
-2. Install required libraries:
-   ```bash
-   pip install pyserial matplotlib
