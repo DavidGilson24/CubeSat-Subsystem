@@ -48,6 +48,8 @@ Gyroscope (X, Y, Z): -76, -85, -64
 
 Current UTC Time using DS3:
 UTC Time: 2025/01/23  14:23:06
+
+Magnetometer HMC/QMC
 X: -0.01 µT  Y: -0.18 µT  Z: 0.10
 -------------------------
 ```
