@@ -67,8 +67,12 @@ X: -0.01 µT  Y: -0.18 µT  Z: 0.10 µT
 WARNING: Magnetic field is very weak! Possible interference.
 <<<<<<<<------------------------->>>>>>>>
 ```
-### Breadboard system design:
+### System design:
+**Implemented**
 ![BREADBOARD-SYSTEM](https://github.com/user-attachments/assets/3f7a6421-bc16-4017-bb5a-60546074a683)
+
+**Not Implemented**
+![ENCLOSURE-DESIGN1](https://github.com/user-attachments/assets/0d237dae-de9b-40f7-bcda-483326f747b4)
 
 # Finalized CubeSat SubSystem response to environment
 
