@@ -74,32 +74,47 @@ WARNING: Magnetic field is very weak! Possible interference.
 
 ```
 Initializing Sensor Subsystem...
-BME280 sensor found and initialized!
-MPU6050 initialized successfully!
-QMC5883L initialized successfully!
-DS3231 initialized successfully!
+[BME] BME280 sensor found and initialized!
+[MPU] MPU6050 initialized successfully!
+[QMC] QMC5883L initialized successfully!
+[DS] DS3231 initialized successfully!
 All sensors initialized successfully!
 ---------------------------------------
 === Sensor Data Report ===
-BME280 Report:
-  Temperature: 22.36 °C (Normal room temperature range)
-  Pressure:    1021.48 hPa (Near-sea-level pressure)
-  Altitude:    7.40 m (approx.)
-  Humidity:    76.21 % (High humidity)
+BME280 Detailed Report:
+  Temperature: 22.36 °C
+    Insight: Comfortable room temperature range.
 
-MPU6050 Report:
-  Accelerometer (g): X=1.02, Y=-0.02, Z=-0.11 (Nearly stable, close to 1g total acceleration)
+  Pressure: 1021.48 hPa
+    Insight: Within normal sea-level range; likely stable weather conditions.
+
+  Altitude (approx): 7.40 m
+    Note: Altitude is derived from pressure. For accuracy, update SEALEVELPRESSURE_HPA.
+
+  Humidity: 76.21 %
+    Insight: High humidity; risk of condensation or corrosion on electronics.
+
+MPU6050 Detailed Report:
+  Accelerometer (g): X=1.02, Y=-0.02, Z=-0.11
+    Insight: Close to 1g total, likely stable orientation.
+
   Gyroscope (deg/s): X=-0.58, Y=-0.65, Z=-0.49
+    Insight: Low rotation rates; system is relatively stable.
 
-QMC5883L Report:
-  Magnetic Field (µT): 0.20 (Extremely weak field - possible interference?)
+QMC5883L Detailed Report:
   Heading: 263.29°
-  Components: X=-0.01µT, Y=-0.18µT, Z=0.10µT
+    Note: 0° = North, 90° = East, etc.
 
-DS3231 RTC Report:
+  Magnetic Field Strength: 0.20 µT
+    Insight: Extremely weak field; likely interference or miscalibration.
+
+  Raw Components: X=-0.01µT, Y=-0.18µT, Z=0.10µT
+
+DS3231 RTC Detailed Report:
   Current UTC Time: 2025/01/23 14:23:06
-  It's daytime. (Based on UTC hour)
+  Insight: It appears to be daytime (based on UTC hour).
 ---------------------------------------
+
 ```
 
 ### What this means:
