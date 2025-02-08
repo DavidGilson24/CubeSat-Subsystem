@@ -74,10 +74,10 @@ WARNING: Magnetic field is very weak! Possible interference.
 
 ```
 Initializing Sensor Subsystem...
-[BME] BME280 sensor found and initialized!
-[MPU] MPU6050 initialized successfully!
-[QMC] QMC5883L initialized successfully!
-[DS] DS3231 initialized successfully!
+[BME] INITIALIZED
+[MPU] INITIALIZED
+[QMC] INITIALIZED
+[DS] INITIALIZED
 All sensors initialized successfully!
 ---------------------------------------
 === Sensor Data Report ===
