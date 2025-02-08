@@ -25,7 +25,7 @@ This project simulates a CubeSat telemetry subsystem, integrating various sensor
 
 ### TEST OUTPUT for subsystem
 
-```shell script
+```shell
 Initializing sensors...
 
 Scanning for I2C devices...
@@ -69,4 +69,7 @@ WARNING: Magnetic field is very weak! Possible interference.
 ```
 ### Breadboard system design:
 ![BREADBOARD-SYSTEM](https://github.com/user-attachments/assets/3f7a6421-bc16-4017-bb5a-60546074a683)
+
+# Finalized CubeSat SubSystem response to environment
+
 
