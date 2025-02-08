@@ -6,36 +6,39 @@
 #include <MPU6050.h>
 
 // Function declarations
-void BMPsetup();
-void BMPloop();
+void BMEsetup();
+void BMEloop();
 void MPUsetup();
 void MPUloop();
 void DS3231setup();
 void DS3231loop();
-void I2Cscan();  // Now we can call the I2C scanner anytime
+void I2Cscan();  
 
 void setup() {
   Serial.begin(9600);
   Serial.println("Initializing sensors...");
 
-  I2Cscan();  // Run I2C scanner first to verify connections
+  I2Cscan();  
 
-  MPUsetup();  // Initialize MPU6050
-  // BMPsetup();  // Initialize BMP280
-  DS3231setup();  // Uncomment to enable RTC
-  QMCsetup();  // Uncomment to enable Magnetometer
+  MPUsetup();  
+  BMEsetup();  
+  DS3231setup();  
+  QMCsetup(); 
 
   Serial.println("All sensors initialized successfully!");
 }
 
 void loop() {
-  MPUloop();  // Read MPU6050 sensor data
-  // BMPloop();  // Read BMP280 sensor data
-  DS3231loop();  // Uncomment if using RTC
-  QMCloop();  // Uncomment if using Magnetometer
+  MPUloop();
+  Serial.println("-------------------------");  
+  BMEloop();
+  Serial.println("-------------------------"); 
+  DS3231loop();
+  Serial.println("-------------------------");   
+  QMCloop(); 
 
-  Serial.println("-------------------------");
-  delay(2000);
+  Serial.println("<<<<<<<<------------------------->>>>>>>>");
+  delay(5000);
 }
 
 

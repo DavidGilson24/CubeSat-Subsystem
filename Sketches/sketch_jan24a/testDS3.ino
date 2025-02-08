@@ -18,7 +18,7 @@ void DS3231setup() {
 }
 
 void DS3231loop() {
-  DateTime now = rtc.now();  // Get current UTC time
+  DateTime now = rtc.now(); 
 
   Serial.println("\nCurrent UTC Time:");
   printTime(now, "UTC");
@@ -26,7 +26,6 @@ void DS3231loop() {
   delay(1000);
 }
 
-// Function to print time in a formatted way
 void printTime(DateTime time, String location) {
   Serial.print(location + " Time: ");
   Serial.print(time.year(), DEC);

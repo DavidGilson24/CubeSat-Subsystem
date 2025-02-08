@@ -1,30 +1,44 @@
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
-#include <Adafruit_BMP280.h>
+#include <Adafruit_BME280.h>
 
-Adafruit_BMP280 bmp;  // BMP280 sensor object
+Adafruit_BME280 bme;
 
-void BMPsetup() {
-  if (!bmp.begin(0x76)) {  // 0x76 or 0x77 depending on your module
-    Serial.println("ERROR: BMP280 not found. Check wiring!");
+#define SEALEVELPRESSURE_HPA (1013.25)
+
+void BMEsetup() {
+  Serial.begin(9600);
+
+  bool status = bme.begin(0x76);
+  if (!status) {
+    Serial.println(F("Could not find a valid BME280 sensor! Check wiring or I2C address."));
     while (1);
   }
-  Serial.println("BMP280 initialized successfully!");
+  Serial.println(F("BME280 sensor found and initialized!"));
 }
 
-void BMPloop() {
-  Serial.println("\nBMP280 Sensor Data:");
+void BMEloop() {
+  float temperatureC = bme.readTemperature();
+  Serial.print(F("Temperature = "));
+  Serial.print(temperatureC);
+  Serial.println(" *C");
 
-  Serial.print("Temperature: ");
-  Serial.print(bmp.readTemperature());
-  Serial.println(" °C");
-
-  Serial.print("Pressure: ");
-  Serial.print(bmp.readPressure() / 100.0F);  // Convert Pa to hPa
+  float pressureHpa = bme.readPressure() / 100.0F;
+  Serial.print(F("Pressure = "));
+  Serial.print(pressureHpa);
   Serial.println(" hPa");
 
-  Serial.print("Approx. Altitude: ");
-  Serial.print(bmp.readAltitude(1013.25));  // Sea level pressure as reference
+  float altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
+  Serial.print(F("Approx. Altitude = "));
+  Serial.print(altitude);
   Serial.println(" m");
+
+  float humidity = bme.readHumidity();
+  Serial.print(F("Humidity = "));
+  Serial.print(humidity);
+  Serial.println(" %");
+
+  Serial.println();
+  delay(2000); 
 }
 
