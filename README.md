@@ -58,4 +58,3 @@ Compass Heading: 263.29°
 -------------------------
 ```
 
-Check **Diagram directory** for looking at the circuit and prototypes
