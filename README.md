@@ -57,4 +57,6 @@ Magnetic Field Strength: 0.198 µT  (Normal range: 25-65 µT, very weak - possib
 Compass Heading: 263.29° 
 -------------------------
 ```
+### Breadboard system design:
+![BREADBOARD-SYSTEM](https://github.com/user-attachments/assets/3f7a6421-bc16-4017-bb5a-60546074a683)
 
