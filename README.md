@@ -23,7 +23,7 @@ This project simulates a CubeSat telemetry subsystem, integrating various sensor
 | HMC5883L | Triple-Axis Magnetometer |
 | MPU6050 | Gyroscope/Accelerometer for Orientation Sensing |
 
-### Example of OUTPUT using HMC, DS3 and MPU
+### TEST OUTPUT for subsystem
 
 ```shell script
 Initializing sensors...
