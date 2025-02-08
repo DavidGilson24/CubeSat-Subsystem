@@ -1,6 +1,6 @@
 # CubeSat Subsystem
 
-A fully functional CubeSat telemetry subsystem built with Arduino and various sensors.
+A functional CubeSat telemetry subsystem built with Arduino and various sensors.
 
 ## Overview
 
@@ -8,7 +8,6 @@ This project simulates a CubeSat telemetry subsystem, integrating various sensor
 
 ## Features
 
-- Telemetry Communication using LoRa SX1278
 - Environmental Monitoring (Temperature, Humidity, Pressure)
 - Real-Time Clock for scheduling transmissions
 - Magnetometer for orientation sensing
@@ -19,9 +18,8 @@ This project simulates a CubeSat telemetry subsystem, integrating various sensor
 | Component        | Function                                        |
 |-----------------|------------------------------------------------|
 | Arduino Uno | Control Unit | 
-| BMP280 | Altitude & Atmospheric Pressure Sensor | 
+| BME280 | Altitude & Atmospheric Pressure Sensor | 
 | DS3231 | Real-Time Clock |
-| LoRa SX1278 | Wireless Telemetry Communication | 
 | HMC5883L | Triple-Axis Magnetometer |
 | MPU6050 | Gyroscope/Accelerometer for Orientation Sensing |
 
@@ -30,32 +28,44 @@ This project simulates a CubeSat telemetry subsystem, integrating various sensor
 ```shell script
 Initializing sensors...
 
-🔍 Scanning for I2C devices...
-✅ Found I2C device at 0xD
-✅ Found I2C device at 0x68
-✅ Found I2C device at 0x69
-🔍 I2C Scan Complete.
+Scanning for I2C devices...
+Found I2C device at 0xD
+Found I2C device at 0x68
+Found I2C device at 0x69
+Found I2C device at 0x76
+I2C Scan Complete.
 --------------------------------
 Initializing MPU6050...
 MPU6050 initialized successfully!
+BME280 sensor found and initialized!
 DS3231 initialized successfully!
 RTC time has been set!
 QMC5883L initialized successfully!
 All sensors initialized successfully!
+-------------------------
 
 MPU6050 Sensor Data:
 Accelerometer (X, Y, Z): 16808, -284, -1812
 Accelerometer (g): 1.02, -0.02, -0.11
 Gyroscope (X, Y, Z): -76, -85, -64
+-------------------------
+
+Temperature = 22.36 *C
+Pressure = 1021.48 hPa
+Approx. Altitude = 7.40 m
+Humidity = 76.21 %
+-------------------------
 
 Current UTC Time using DS3:
 UTC Time: 2025/01/23  14:23:06
-
-Magnetometer HMC/QMC:
-X: -0.01 µT  Y: -0.18 µT  Z: 0.10
-Magnetic Field Strength: 0.198 µT  (Normal range: 25-65 µT, very weak - possible interference)
-Compass Heading: 263.29° 
 -------------------------
+
+Magnetometer HMC/QMC Readings:
+Magnetic Field Strength: 0.198 µT  (Normal range: 25-65 µT)
+Compass Heading: 263.29° 
+X: -0.01 µT  Y: -0.18 µT  Z: 0.10 µT
+WARNING: Magnetic field is very weak! Possible interference.
+<<<<<<<<------------------------->>>>>>>>
 ```
 ### Breadboard system design:
 ![BREADBOARD-SYSTEM](https://github.com/user-attachments/assets/3f7a6421-bc16-4017-bb5a-60546074a683)
