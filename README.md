@@ -69,15 +69,13 @@ WARNING: Magnetic field is very weak! Possible interference.
 ```
 # System design:
 
-## Implemented
-**Breadboard & Full-Board Setup**
+###Breadboard & Full-Board Setup
 ![BREADBOARD-SYSTEM](https://github.com/user-attachments/assets/3f7a6421-bc16-4017-bb5a-60546074a683)
 
-**ProtoShield System Setup**
+### ProtoShield System Setup
 ![ProtoShield](https://github.com/user-attachments/assets/265aceed-508b-406c-8a3e-03dd4781db34)
 
-## Not Implemented
-**Enclosure Setup**
+### Enclosure Setup
 ![ENCLOSURE-DESIGN1](https://github.com/user-attachments/assets/0d237dae-de9b-40f7-bcda-483326f747b4)
 
 # Finalized CubeSat SubSystem response to environment
