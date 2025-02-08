@@ -17,7 +17,7 @@ This project simulates a CubeSat telemetry subsystem, integrating various sensor
 
 | Component        | Function                                        |
 |-----------------|------------------------------------------------|
-| Arduino Uno | Control Unit | 
+| Arduino R3 | Control Unit | 
 | BME280 | Altitude & Atmospheric Pressure Sensor | 
 | DS3231 | Real-Time Clock |
 | HMC5883L | Triple-Axis Magnetometer |
