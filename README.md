@@ -56,3 +56,5 @@ Magnetic Field Strength: 0.198 µT  (Normal range: 25-65 µT, very weak - possib
 Compass Heading: 263.29° 
 -------------------------
 ```
+
+Check **Diagram directory** for looking at the circuit and prototypes
