@@ -22,8 +22,8 @@ void setup() {
 
   MPUsetup();  // Initialize MPU6050
   // BMPsetup();  // Initialize BMP280
-  // DS3231setup();  // Uncomment to enable RTC
-  // QMCsetup();  // Uncomment to enable Magnetometer
+  DS3231setup();  // Uncomment to enable RTC
+  QMCsetup();  // Uncomment to enable Magnetometer
 
   Serial.println("All sensors initialized successfully!");
 }
@@ -31,8 +31,8 @@ void setup() {
 void loop() {
   MPUloop();  // Read MPU6050 sensor data
   // BMPloop();  // Read BMP280 sensor data
-  // DS3231loop();  // Uncomment if using RTC
-  // QMCloop();  // Uncomment if using Magnetometer
+  DS3231loop();  // Uncomment if using RTC
+  QMCloop();  // Uncomment if using Magnetometer
 
   Serial.println("-------------------------");
   delay(2000);
