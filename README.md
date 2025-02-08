@@ -72,4 +72,34 @@ WARNING: Magnetic field is very weak! Possible interference.
 
 # Finalized CubeSat SubSystem response to environment
 
+```
+Initializing Sensor Subsystem...
+BME280 sensor found and initialized!
+MPU6050 initialized successfully!
+QMC5883L initialized successfully!
+DS3231 initialized successfully!
+All sensors initialized successfully!
+---------------------------------------
+=== Sensor Data Report ===
+BME280 Report:
+  Temperature: 22.36 °C (Normal room temperature range)
+  Pressure:    1021.48 hPa (Near-sea-level pressure)
+  Altitude:    7.40 m (approx.)
+  Humidity:    76.21 % (High humidity)
 
+MPU6050 Report:
+  Accelerometer (g): X=1.02, Y=-0.02, Z=-0.11 (Nearly stable, close to 1g total acceleration)
+  Gyroscope (deg/s): X=-0.58, Y=-0.65, Z=-0.49
+
+QMC5883L Report:
+  Magnetic Field (µT): 0.20 (Extremely weak field - possible interference?)
+  Heading: 263.29°
+  Components: X=-0.01µT, Y=-0.18µT, Z=0.10µT
+
+DS3231 RTC Report:
+  Current UTC Time: 2025/01/23 14:23:06
+  It's daytime. (Based on UTC hour)
+---------------------------------------
+```
+
+### What this means:
