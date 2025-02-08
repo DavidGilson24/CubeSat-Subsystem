@@ -135,7 +135,7 @@ DS3231 RTC Detailed Report:
   - **Earth Context:**  
     - Very close to standard sea-level pressure (1013 hPa), indicating near-sea-level elevation with stable weather conditions.  
   - **High Altitude / Near-Space:**  
-    - Pressure drops significantly with altitude. Near the edge of space (30+ km), atmospheric pressure is only a fraction of sea-level values. If you’re still reading ~1000 hPa, the sensor is likely not exposed to the outside or not actually at altitude yet.  
+    - Pressure drops significantly with altitude. Near the edge of space (30+ km), atmospheric pressure is only a fraction of sea-level values.
   - **Orbit:**  
     - True orbital flight is a near-vacuum environment (~0 hPa). A BME280 reading around 1000 hPa in orbit would imply it’s measuring the internal pressure of a sealed satellite module rather than the external vacuum.
 
@@ -143,15 +143,15 @@ DS3231 RTC Detailed Report:
   - **Earth Context:**  
     - Suggests a location close to sea level. This is plausible if you’re physically near coastal regions or at low elevation.  
   - **High Altitude / Near-Space:**  
-    - If actually in near-space, this value should read thousands of meters or more. A low altitude reading indicates either you’re still on the ground or the sensor calibration is set for local sea-level reference.  
+    - If actually in near-space, this value should read thousands of meters or more
   - **Orbit:**  
-    - In Low-Earth Orbit, you’re 200+ km above Earth’s surface. Because the sensor uses atmospheric pressure to estimate altitude, it wouldn’t reflect real orbital altitude unless it’s measuring internal craft pressure and you artificially offset calculations.
+    - In Low-Earth Orbit, you’re 200+ km above Earth’s surface. Because the sensor uses atmospheric pressure to estimate altitude, it wouldn’t reflect real orbital altitude.
 
 - **Humidity: 76.21 %**  
   - **Earth Context:**  
     - Relatively high humidity, indicating a humid environment (possibly coastal or a damp indoor setting). High humidity can risk condensation or corrosion on sensitive electronics if not properly sealed.  
   - **High Altitude / Near-Space:**  
-    - Humidity generally decreases sharply as altitude increases. A 76% reading would typically mean near-ground-level conditions.  
+    - Humidity generally decreases sharply as altitude increases.  
   - **Orbit:**  
     - External humidity is virtually zero in a vacuum. If a CubeSat measured 76% internally, that would be a sign of poor humidity control or possible leakage of moisture into the sealed environment.
 
@@ -174,11 +174,11 @@ DS3231 RTC Detailed Report:
 - **Magnetic Field Strength: ~0.20 µT**  
   - **Typical Earth Surface Range:** 25–65 µT.  
   - **Interpretation:**  
-    - This reading is much weaker than Earth’s expected field. Likely indicates either local interference (e.g., large metal objects, EMI), miscalibration, or a sensor issue.  
+    - This reading is much weaker than Earth’s expected field. Likely indicates local interference (e.g., large metal objects, EMI).  
   - **High Altitude / Near-Space:**  
     - Earth’s field is somewhat weaker but still much higher than 0.20 µT.  
   - **Orbit:**  
-    - In Low-Earth Orbit, the Earth’s magnetic field is still measurable (often 20–60 µT). A measured 0.20 µT strongly suggests interference or that the sensor isn’t calibrated properly.
+    - In Low-Earth Orbit, the Earth’s magnetic field is still measurable (often 20–60 µT).
 
 - **Heading: 263.29°**  
   - Interprets the sensor facing roughly West (where 0°=North, 90°=East, 180°=South, and 270°=West). This could be skewed by indoor interference or metal objects.
@@ -195,7 +195,7 @@ DS3231 RTC Detailed Report:
 1. **Environment**: The subsystem is operating under typical **ground-level conditions** (22 °C, ~1021 hPa).  
 2. **Humidity**: 76% is relatively high, prompting concerns about potential moisture issues if not handled properly.  
 3. **Stability**: Low gyroscopic and near-1g accelerometer readings indicate a **stationary** or gently angled orientation, consistent with a lab test setup.  
-4. **Magnetic Field Anomaly**: An extremely weak measured field (~0.20 µT) suggests **interference or calibration** problems with the magnetometer, especially since normal Earth conditions should read tens of microteslas.  
+4. **Magnetic Field Anomaly**: An extremely weak measured field (~0.20 µT) suggests **interference** problems with the magnetometer, especially since normal Earth conditions should read tens of microteslas.  
 5. **Timekeeping**: The DS3231 shows an accurate timestamp, useful for logging or telemetry scheduling.
 
 ---
@@ -207,5 +207,5 @@ DS3231 RTC Detailed Report:
 - **Attitude & Orbit**: Real orbital measurements might see near-0 g (unless maneuvering) and possibly a different magnetic field strength if the magnetometer is properly calibrated.  
 - **Data Logging & Time Sync**: The DS3231 provides consistent timing for data logging, which is crucial for correlating sensor events with ground station telemetry.  
 
-Overall, **these test results confirm** that the sensors are functioning, but **they also highlight** areas needing attention for a real mission scenario (particularly magnetometer calibration and humidity control). Once you deploy this subsystem beyond ground-level conditions, expect significantly different readings (e.g., near-zero atmospheric pressure, wider temperature ranges, etc.), and ensure your CubeSat design accounts for these extremes.
+Overall, **these test results confirm** that the sensors are functioning, but **they also highlight** areas needing attention for a real mission scenario (particularly magnetometer calibration and humidity control). If a telemetry subsystem such as this is deployed, we should notice significantly different readings (e.g., near-zero atmospheric pressure, wider temperature ranges, etc.).
 
