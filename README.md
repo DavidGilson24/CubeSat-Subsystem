@@ -69,7 +69,7 @@ WARNING: Magnetic field is very weak! Possible interference.
 ```
 # System design:
 
-###Breadboard & Full-Board Setup
+### Breadboard & Full-Board Setup
 ![BREADBOARD-SYSTEM](https://github.com/user-attachments/assets/3f7a6421-bc16-4017-bb5a-60546074a683)
 
 ### ProtoShield System Setup
